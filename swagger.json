@@ -1,0 +1,34 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "TestRest",
+    "version" : "1.0.0",
+    "description" : "TestRest"
+  },
+  "paths" : {
+    "/names" : {
+      "get" : {
+        "operationId" : "getNames",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/names"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve names"
+      }
+    }
+  },
+  "basePath" : "/testrest/v1",
+  "definitions" : {
+    "names" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    }
+  }
+}
